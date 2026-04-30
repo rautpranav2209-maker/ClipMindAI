@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-jakarta: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  --color-accent: #7c3aed;
+}
+
+:root {
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --surface: #0f1120;
+  --border: #1e2340;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #080a12;
+    color: #f1f5f9;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-violet-600 hover:bg-violet-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-transparent border border-violet-500 text-violet-400 hover:bg-violet-500/10 font-semibold px-5 py-2.5 rounded-xl transition-colors;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-slate-300 hover:text-white font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .card {
+    @apply bg-[#0f1120] border border-[#1e2340] rounded-2xl p-6;
+  }
+  .input {
+    @apply bg-[#0f1120] border border-[#1e2340] rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-violet-500 w-full;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-300 mb-1.5;
+  }
+}
+
